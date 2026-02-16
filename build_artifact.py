@@ -19,7 +19,7 @@ from pathlib import Path
 from datetime import datetime
 
 # Adiciona src ao path
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+sys.path.insert(0, str(Path(__file__).parent.absolute() / "src"))
 
 from puf.simulated_puf import SimulatedPUF
 from fuzzy_extractor.fuzzy_extractor import FuzzyExtractor
@@ -50,9 +50,10 @@ def collect_source_files() -> dict:
     """Coleta todos os arquivos fonte"""
     files = {}
     
-    src_path = Path("src")
+    base_path = Path(__file__).parent.absolute()
+    src_path = base_path / "src"
     for py_file in src_path.rglob("*.py"):
-        rel_path = py_file.relative_to(Path.cwd())
+        rel_path = py_file.relative_to(base_path)
         with open(py_file, "rb") as f:
             files[str(rel_path)] = f.read()
     

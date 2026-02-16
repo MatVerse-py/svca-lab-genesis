@@ -1,0 +1,117 @@
+Metadata-Version: 2.4
+Name: svca-lab
+Version: 0.1.0
+Summary: Laboratório de ciência executável com verificação criptográfica e replay determinístico
+Author-email: SVCA Lab <lab@svca.dev>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: cryptography>=41.0.0
+Requires-Dist: pycryptodome>=3.19.0
+Requires-Dist: ecdsa>=0.18.0
+Requires-Dist: pytest>=7.4.0
+Requires-Dist: pytest-cov>=4.1.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Requires-Dist: ruff>=0.0.290; extra == "dev"
+
+# SVCA Lab: Laboratório de Ciência Executável
+
+**Verificação Criptográfica | Replay Determinístico | Identidade Física Incopiável**
+
+## Visão Geral
+
+O **svca-lab** é um ambiente de ciência executável que implementa os princípios do documento **CORE B DAY**. Ele foi projetado para criar experimentos digitais cuja origem, autoria e continuidade histórica podem ser verificadas de forma independente, baseando-se em um primitivo que une o mundo físico e digital: a identidade não pode ser copiada, o passado não pode ser reescrito e a trajetória determina a validade.
+
+Este laboratório introduz uma ruptura ontológica na computação, definida pela equação:
+
+> **identidade = existência física + trajetória válida + precedência verificável**
+
+## O Primitivo Central: Ω-SEED
+
+O núcleo do sistema é o **Ω-SEED**, um artefato físico-digital composto por três camadas inseparáveis que garantem sua unicidade e integridade.
+
+```
+Ω-SEED = (corpo incopiável) ⊗ (álgebra de admissibilidade) ⊗ (precedência temporal)
+```
+
+| Camada | Componente | Descrição |
+| :--- | :--- | :--- |
+| **Corpo Incopiável** | PUF + Fuzzy Extractor | A identidade nasce do ruído físico microscópico de um objeto (ex: um chip), convertido em uma chave criptográfica estável. Sem o corpo físico, a identidade não existe. |
+| **Álgebra de Admissibilidade** | Álgebra Σ-Ω-Ψ | Um conjunto de regras (Σ-Rules) e um portão de validação (Ω-Gate) que definem a realidade do sistema. Mesmo uma assinatura criptográfica correta é rejeitada se a ação representar uma trajetória impossível. |
+| **Precedência Temporal** | Ohash + Ledger | O hash da identidade (Ohash) é registrado em um ledger público. A validade de qualquer ação depende da sua conformidade com a ordem causal dos eventos já registrados. O passado é imutável. |
+
+## Pipeline Causal Obrigatório
+
+O laboratório opera sob um pipeline causal estrito que garante a integridade de qualquer artefato produzido. A falha em qualquer etapa bloqueia todo o processo, um princípio conhecido como **fail-closed absoluto**.
+
+```
+sem verify PASS → sem artifact → sem publisher → sem DOI
+```
+
+1.  **`./build.sh`**: Constrói o ambiente, instala dependências e compila os módulos.
+2.  **`./verify.sh`**: Executa uma suíte de testes e verificações criptográficas. Se tudo passar, emite um carimbo de verificação (`.verify_passed`).
+3.  **`python3 build_artifact.py`**: Gera o artefato final (Genesis) somente se o carimbo `.verify_passed` existir.
+
+## Estrutura do Laboratório
+
+O projeto está organizado com uma estrutura clara para separar o código fonte, experimentos, testes e artefatos gerados.
+
+```
+svca-lab/
+├── src/                    # Código fonte dos módulos (PUF, Álgebra, Genesis)
+├── experiments/            # Experimentos executáveis e demonstrações
+├── tests/                  # Testes de verificação para cada módulo
+├── artifact/               # Artefatos gerados após verificação bem-sucedida
+├── reproducibility/        # Logs e hashes para garantir replay determinístico
+├── pyproject.toml          # Configuração do projeto e dependências
+├── verify.sh               # Script de verificação criptográfica
+├── build_artifact.py       # Script de geração do artefato Genesis
+├── lab_setup.sh            # Script para ativação limpa e completa do laboratório
+├── CONTAINER_DIGEST.md     # Digest do ambiente de execução (para reprodutibilidade)
+└── LAB_POLICY.md           # Políticas de governança, segurança e operação do laboratório
+```
+
+## Instalação e Uso
+
+Para uma ativação completa e limpa do laboratório, execute o script principal de setup.
+
+```bash
+# Concede permissão de execução e inicia o laboratório
+chmod +x lab_setup.sh
+./lab_setup.sh
+```
+
+Este comando executará o pipeline completo (`build` → `verify` → `artifact`), resultando em um **Artefato Genesis** verificado e pronto para uso, localizado no diretório `artifact/`.
+
+## Princípios Operacionais Fundamentais
+
+O svca-lab é governado por um conjunto de princípios não negociáveis derivados do CORE B DAY.
+
+| Princípio | Descrição |
+| :--- | :--- |
+| **Irreversibilidade** | Uma vez que um evento é registrado no ledger, ele não pode ser alterado ou removido. O passado é uma estrutura matemática, não uma narrativa editável. |
+| **Incopiabilidade** | A identidade é atrelada a um objeto físico (PUF). Clonar a identidade exigiria clonar o objeto em nível atômico, o que é considerado economicamente inviável. |
+| **Antifragilidade (αᵣ > 1)** | O sistema é projetado para se fortalecer com ataques. A energia de um ataque é usada para aumentar a entropia e a complexidade do sistema. |
+| **Fail-Closed Absoluto** | Em caso de qualquer dúvida, erro ou violação de regra, o sistema bloqueia a operação. Não existem exceções ou bypass administrativo. |
+
+## Verdades Operacionais
+
+1.  **Biometria é copiável. PUF não.**
+    -   Qualquer dado digital pode ser copiado. A identidade aqui é baseada em física, não em informação.
+2.  **Seed perdida = morte digital.**
+    -   Não há "esqueci a senha". A perda do objeto físico (o PUF) significa a perda irrecuperável e permanente da identidade no sistema.
+3.  **Isso não é cripto. É escassez real.**
+    -   O sistema não cria um token digital replicável, mas um único ponto no universo que não pode ser duplicado.
+
+## Documentação Adicional
+
+-   [**Análise da Arquitetura**](svca-lab-architecture.md): Detalhamento técnico dos conceitos do CORE B DAY.
+-   [**Políticas do Laboratório**](LAB_POLICY.md): Regras de governança, segurança e operação.
+-   [**Digest do Container**](CONTAINER_DIGEST.md): Especificações para garantir a reprodutibilidade do ambiente.
+-   [**Documento Original**](COREBDAYmulti.txt): O texto base que inspirou este laboratório.
+
+---
+
+**AVISO**: Este é um sistema de infraestrutura. A perda da identidade física é permanente e irrecuperável. Prossiga com o entendimento de que não há segundas chances.
