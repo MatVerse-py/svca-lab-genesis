@@ -1,6 +1,6 @@
 # Evidence Note: SVCA Lab - Executable Science with Cryptographic Verification and Adaptive Physical Identity
 
-**Authors**: Manus AI, CORE B DAY Protocol  
+**Authors**: Mateus Arêas [1], Manus AI  
 **Date**: February 16, 2026  
 **Version**: 0.2.0-beta  
 **Status**: Peer-Review Ready / Executable Artifact
@@ -42,7 +42,7 @@ $$\text{build} \rightarrow \text{verify} \rightarrow \text{artifact}$$
 
 ## 4. Results and Discussion
 
-Our implementation demonstrates that a "fail-closed" architecture successfully blocks retroactive timestamps and low-entropy identities. The **Antifragility Metric ($\alpha_r$)** shows that the system's robustness increases under simulated attacks, as the entropy of the state vector expands to encompass the attack energy. The integration of the RP2040 Bridge and Adaptive Omega Engine significantly enhances the system's ability to ground digital identity in real-world physics and to self-organize its admissibility criteria, moving beyond static, pre-programmed rules.
+Our implementation demonstrates that a "fail-closed" architecture successfully blocks retroactive timestamps and low-entropy identities. The **Antifragility Metric ($\alpha_r$)** shows that the system\'s robustness increases under simulated attacks, as the entropy of the state vector expands to encompass the attack energy. The integration of the RP2040 Bridge and Adaptive Omega Engine significantly enhances the system\'s ability to ground digital identity in real-world physics and to self-organize its admissibility criteria, moving beyond static, pre-programmed rules.
 
 ## 5. Conclusion
 
@@ -50,8 +50,10 @@ The SVCA Lab provides a blueprint for institutional-grade computational infrastr
 
 ## References
 
-1. CORE B DAY Protocol Documentation (2026).
-2. Physical Unclonable Functions in Cryptography, Pappu et al.
-3. Fuzzy Extractors: How to Generate Strong Keys from Biometrics and Other Noisy Data, Dodis et al.
-4. RP2040 Datasheet, Raspberry Pi Foundation.
-5. Adaptive Control Systems, Karl Åström and Björn Wittenmark.
+1. Mateus Arêas. ORCID: [0009-0008-2973-4047](https://orcid.org/0009-0008-2973-4047).
+2. CORE B DAY Protocol Documentation (2026).
+3. Physical Unclonable Functions in Cryptography, Pappu et al.
+4. Fuzzy Extractors: How to Generate Strong Keys from Biometrics and Other Noisy Data, Dodis et al.
+5. RP2040 Datasheet, Raspberry Pi Foundation.
+6. Adaptive Control Systems, Karl Åström and Björn Wittenmark.
+7. SVCA Lab: Executable Science with Cryptographic Verification and Adaptive Physical Identity. Zenodo. [DOI: 10.5281/zenodo.18667128](https://doi.org/10.5281/zenodo.18667128)
