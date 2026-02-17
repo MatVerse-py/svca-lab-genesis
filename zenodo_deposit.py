@@ -4,7 +4,8 @@ import os
 from pathlib import Path
 
 # Zenodo Production API
-ZENODO_API_URL = "https://zenodo.org/api/deposit/depositions"
+ZENODO_API_URL = "https://sandbox.zenodo.org/api/deposit/depositions"
+# SANDBOX_API_URL = "https://sandbox.zenodo.org/api/deposit/depositions"
 
 def get_token():
     # Try to get from environment variable
@@ -70,7 +71,7 @@ def create_deposit():
         tarball_path = Path("/home/ubuntu/svca-lab.tar.gz")
         if not tarball_path.exists():
             # Create tarball if it doesn't exist
-            os.system(f"cd /home/ubuntu && tar -czf svca-lab.tar.gz svca-lab")
+            os.system(f"cd /home/ubuntu && tar -czf svca-lab.tar.gz svca-lab-genesis")
             
         with open(tarball_path, "rb") as f:
             upload_url = f"{bucket_url}/svca-lab.tar.gz"
