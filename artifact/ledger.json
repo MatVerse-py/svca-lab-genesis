@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "ohash": "5a9a3644eef404c4cde461398ffd00633e27c9e16319d04916f162e605b567e5",
+      "timestamp": "2026-02-17T07:56:38.652572Z",
+      "puf_id": "78ebdc041c8232b8",
+      "entropy_bits": 256.0,
+      "algorithm": "SHA3-256",
+      "metadata": {
+        "ber": 0.02,
+        "puf_type": "SimulatedPUF",
+        "lab_version": "0.1.0"
+      }
+    }
+  ],
+  "count": 1
+}

@@ -1,0 +1,86 @@
+{
+  "genesis_hash": "fca22fc3076fdf225d466ee2faa0106460c0bd7cad0265fcf7e96629e1c6bcbe",
+  "version": "1.0.0",
+  "protocol": "CORE_B_DAY",
+  "integrity_vector": {
+    "bundle_hash": "80f9b723700686b9d5b1f5a45a0151ea205a718b638c1d1db46b9a2d461c3bbd",
+    "manifest": {
+      "src/algebra/__init__.py": "1b86664936780814a0b1973509993d03b96932d6c4a3774191d614b06f0689ee",
+      "src/algebra/adaptive_omega.py": "8041441b78f378232cc0c9c3d3a759d82032d34a5195347c38933ef62309c310",
+      "src/algebra/omega_gate.py": "e854564908d9e96c246b36553d90db2faa6e7b914697e0706696d16425c7c1c3",
+      "src/algebra/psi_state.py": "27fe0292d5914e4cf38acce41c7c43cd2e7bd034a79fdb6cd9633b6dcb6ea805",
+      "src/algebra/sigma_rules.py": "84de21944040e4affb8dde30e4b7ba2aa1b8553c7dfe07802c66b1eabfb2d754",
+      "src/fuzzy_extractor/__init__.py": "62d0ffeb96687bdfdc644a58200f8706597fb25fa9ae5d0025707a3abe682fa8",
+      "src/fuzzy_extractor/bch_helper.py": "10a70af9c7a77f5a4a0ba50aaa42a449aa1947f85449bf87c44e0ea875ad9958",
+      "src/fuzzy_extractor/fuzzy_extractor.py": "91d0580c78b17a07229ef2754903a6cbc23203596b63cc01c7694fd37c29e803",
+      "src/genesis/__init__.py": "e328bb132398fb48a4b631cfbcdbd43f20248cdf5b3f37dd60dfd10decb1e969",
+      "src/genesis/genesis_artifact.py": "529823a9cfdbf784fdd7dab47df1c6fb229184c9ded0cce714dd6ec095cde599",
+      "src/genesis/triple_anchor.py": "f911896f77bf894d432e3b6c82b8058a5538d6f99523cdd6eed5b30e67e4565b",
+      "src/ohash/__init__.py": "adbd72e1472e4cfcd9098732bf7474e772e311e217353e0fde06a5cfc7ca3691",
+      "src/ohash/ohash.py": "0603678c3d5ed0d2d741b957887fea9798f419c16f45cfba98d5743a23de3172",
+      "src/puf/__init__.py": "966e4599c5042e5e4c945756f95fff79de060f7c0e784158b421230ac2d337e4",
+      "src/puf/optical_puf.py": "2d13409ba5adddd9a4dc1c1e29eca763e270647169d9418e961f1006f1122b2e",
+      "src/puf/puf_base.py": "47ad29a401d65acb4a3675d54238c8985146321d8f12aaa3dd8213576d0d823f",
+      "src/puf/rp2040_bridge.py": "34aac84f0fb86dea7a364cd6ef9410a45dcb0a2d37105f7b798177dcbd90c7bf",
+      "src/puf/simulated_puf.py": "5a00161c51902f2864264bf6ca93cc16da7746c12099d83bcb0b687c29909936",
+      "src/puf/sram_puf.py": "b4e9042dd525c881dd97024989b40166d4e9b4e0869493634e3960b0e9ddc0da"
+    },
+    "file_count": 19
+  },
+  "identity_commitment": {
+    "puf_id": "78ebdc041c8232b8",
+    "ohash": "5a9a3644eef404c4cde461398ffd00633e27c9e16319d04916f162e605b567e5",
+    "entropy_bits": 256.0
+  },
+  "physical_witness": {
+    "puf_id": "78ebdc041c8232b8",
+    "entropy_bits": 256.0
+  },
+  "temporal_anchors": {
+    "anchors": {
+      "system": {
+        "type": "system",
+        "timestamp": 1771314998.65357,
+        "timestamp_iso": "2026-02-17T07:56:38.653570Z",
+        "source": "system_clock",
+        "signature": null
+      },
+      "network": {
+        "type": "network",
+        "timestamp": 1771314998.653586,
+        "timestamp_iso": "2026-02-17T07:56:38.653586Z",
+        "source": "pool.ntp.org",
+        "signature": null
+      },
+      "ledger": {
+        "type": "ledger",
+        "timestamp": 1771314998.65359,
+        "timestamp_iso": "2026-02-17T07:56:38.653590Z",
+        "source": "simulated_ledger",
+        "signature": "3d3337c602e16db2059c55e693a7736cccfa50d4e535e61ac1aef1e35cdf07be"
+      }
+    },
+    "median_timestamp": 1771314998.653586,
+    "consistent": true
+  },
+  "experiment": {
+    "name": "SVCA Lab Genesis",
+    "description": "Laborat\u00f3rio de ci\u00eancia execut\u00e1vel com verifica\u00e7\u00e3o criptogr\u00e1fica",
+    "metadata": {
+      "verify_stamp": {
+        "Timestamp": "2026-02-17T07:56:38Z",
+        "Source Hash": "618e1424c20626692bf5a2b1825ded609b308c112a81f3858bad47008a81d550",
+        "Python": "3.11.0rc1",
+        "Status": "PASS"
+      },
+      "python_version": "3.11.0rc1",
+      "creation_date": "2026-02-17T07:56:38.653557Z"
+    }
+  },
+  "signatures": [],
+  "lineage_policy": {
+    "parent": null,
+    "fork_allowed": true,
+    "fork_policy": "open"
+  }
+}

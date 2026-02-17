@@ -1,6 +1,7 @@
 README.md
 pyproject.toml
 src/algebra/__init__.py
+src/algebra/adaptive_omega.py
 src/algebra/omega_gate.py
 src/algebra/psi_state.py
 src/algebra/sigma_rules.py
@@ -15,6 +16,7 @@ src/ohash/ohash.py
 src/puf/__init__.py
 src/puf/optical_puf.py
 src/puf/puf_base.py
+src/puf/rp2040_bridge.py
 src/puf/simulated_puf.py
 src/puf/sram_puf.py
 src/svca_lab.egg-info/PKG-INFO
